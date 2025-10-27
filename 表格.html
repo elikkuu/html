@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>表格</title> <!-- 設定網頁標題 -->
+    </head>
+
+    <body>
+        <!-- ===== 第一個表格：2x3 表格 ===== -->
+        <!-- border="1" 代表表格邊框粗細為 1 像素 -->
+        <table border="1">
+            <!-- <tr> 表示表格的一列（table row） -->
+            <!-- <td> 表示一個儲存格（table data） -->
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+
+        <br> <!-- 換行，讓表格之間有間距 -->
+
+        <!-- ===== 第二個表格：使用 colspan（跨欄） ===== -->
+        <!-- colspan 用來讓儲存格橫向合併多個欄位 -->
+        <table border="1">
+            <tr>
+                <td>1</td>
+                <!-- 這個儲存格橫跨 2 欄 -->
+                <td colspan="2">2 3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+
+        <br> <!-- 再加一個換行 -->
+
+        <!-- ===== 第三個表格：使用 rowspan（跨列） ===== -->
+        <!-- rowspan 用來讓儲存格縱向合併多列 -->
+        <table border="1">
+            <tr>
+                <!-- 這個儲存格縱向合併 2 列 -->
+                <td rowspan="2">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
