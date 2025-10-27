@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>css</title> <!-- 設定網頁標題 -->
+
+        <!-- ===== external（外部）CSS ===== -->
+        <!-- 使用 link 標籤引入外部的 CSS 樣式檔 -->
+        <!-- href 屬性指定外部樣式表的網址或路徑 -->
+        <link rel="stylesheet" href="https://rawcdn.githack.com/shhuangmust/html/main/style.css">
+
+        <!-- ===== internal（內部）CSS ===== -->
+        <!-- 使用 <style> 標籤直接在 HTML 文件中撰寫樣式 -->
+        <style>
+            /* h2 標題的文字顏色設定為綠色 */
+            h2 {
+                color: green;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- ===== inline（行內）CSS ===== -->
+        <!-- 直接在標籤裡使用 style 屬性定義樣式 -->
+        <h1 style="color:red;">
+            這是甚麼顏色 <!-- 行內樣式：紅色文字 -->
+        </h1>
+
+        <!-- 內部樣式（由 <style> 內設定）會影響這裡的 h2 -->
+        <h2>
+            這是甚麼顏色 <!-- 綠色文字 -->
+        </h2>
+
+        <!-- 外部樣式表（style.css）裡設定的樣式會影響這裡的 h3 -->
+        <h3>
+            這是甚麼顏色 <!-- 依照外部 CSS 的設定顯示 -->
+        </h3>
+    </body>
+</html>
