@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" /> <!-- 設定網頁字元編碼為 UTF-8，確保中文正常顯示 -->
+    <title>文字大小寫範例</title> <!-- 網頁標題 -->
+
+    <style>
+        /* 
+           h1 標題樣式設定：
+           color: #1a7aef → 文字顏色（藍色調）
+           background-color: #ff6a00 → 背景顏色（橘色）
+           box-shadow: 2px 2px 3px red → 加上紅色陰影，位移量為 2px (右)、2px (下)，模糊 3px
+           text-transform: uppercase → 將文字自動轉成「全大寫」
+        */
+        h1 {
+            color: #1a7aef;
+            background-color: #ff6a00;
+            box-shadow: 2px 2px 3px red;
+            text-transform: uppercase;
+        }
+
+        /* 
+           h2 標題樣式設定：
+           text-transform: lowercase → 將文字自動轉成「全小寫」
+        */
+        h2 {
+            text-transform: lowercase;
+        }
+
+        /* 
+           h3 標題樣式設定：
+           text-transform: capitalize → 將每個單字的「第一個字母」轉成大寫
+        */
+        h3 {
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <!-- 測試用的文字，展示不同 text-transform 效果 -->
+    <h1>Text Transform Example</h1> <!-- 全大寫 -->
+    <h2>Text Transform Example</h2> <!-- 全小寫 -->
+    <h3>text transform example</h3> <!-- 每個字首大寫 -->
+</body>
+</html>
