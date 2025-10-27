@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" /> <!-- 設定網頁的字元編碼為 UTF-8，確保中文顯示正常 -->
+    <title>文字縮排範例</title> <!-- 網頁標題 -->
+
+    <style>
+        /* 
+           #p1 代表 id 為 p1 的段落
+           text-indent: 3em 表示首行縮排 3 個字元寬度（em 為相對單位）
+        */
+        #p1 {
+            text-indent: 3em;
+        }
+
+        /* 
+           #p2 代表 id 為 p2 的段落
+           text-indent: -3em 代表首行反向縮排（往左縮 3em）
+           margin-left: 3em 則將整段文字往右移 3em
+           合起來的效果是讓第一行凸出，後面行文字對齊（常見於清單或段落標示）
+        */
+        #p2 {
+            text-indent: -3em;
+            margin-left: 3em;
+        }
+    </style>
+</head>
+<body>
+    <!-- 第一段文字：首行縮排 3em -->
+    <p id="p1">輕度颱風「鳳凰」路經大幅東修，將朝西北西方向往台灣。</p>
+
+    <!-- 第二段文字：首行反向縮排，形成凸排效果 -->
+    <p id="p2">輕度颱風「鳳凰」路經大幅東修，將朝西北西方向往台灣。</p>
+</body>
+</html>
