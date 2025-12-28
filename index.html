@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>哇哈哈大學資訊管理系</title>
 
-    <!-- FlexSlider -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
+    <!-- jQuery & FlexSlider -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/flexslider/2.7.2/flexslider.min.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
 
     <script>
         $(window).on('load', function () {
             $('.flexslider').flexslider({
-                animation: "slide"
+                animation: "slide",
+                controlNav: true,
+                directionNav: true
             });
         });
     </script>
@@ -21,231 +23,242 @@
         * {
             margin: 0;
             box-sizing: border-box;
-            font-family: Arial, "Microsoft JhengHei", sans-serif;
-            text-align: center;
-            color: #555;
+            font-family: "Microsoft JhengHei";
         }
 
         body {
-            background-image: url("bg.jpg");
-            background-size: cover;
-            background-attachment: fixed;
+            background-color: #f2f2f2;
         }
 
-        /* top */
+        /* ===== 頁首 ===== */
         .top {
             background: white;
-        }
-        .top .container {
+            padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px;
         }
+
         .logo {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: bold;
         }
-        .logo img {
-            width: 90px;
-            vertical-align: middle;
-        }
+
         .top-nav a {
             margin-left: 15px;
             text-decoration: none;
-            font-size: 20px;
+            color: #333;
+            font-size: 18px;
         }
 
-        /* nav */
+        /* ===== 導覽列 + 下拉 ===== */
         .nav {
             background: #333;
         }
+
         .nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
         }
-        .nav li a {
-            color: white;
-            padding: 15px 20px;
+
+        .nav li {
+            position: relative;
+        }
+
+        .nav a {
             display: block;
+            padding: 15px 20px;
+            color: white;
             text-decoration: none;
         }
-        .nav li a:hover {
+
+        .nav a:hover {
             background: #005BAC;
         }
 
-        /* slider */
-        .slider {
-            background: black;
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #333;
+            min-width: 150px;
+            top: 50px;
+            left: 0;
+            z-index: 10;
         }
-        .flexslider img {
+
+        .dropdown-content a {
+            padding: 12px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* ===== 輪播 ===== */
+        .slider img {
             width: 100%;
-            height: auto;
-        }
-
-        /* banner */
-        .banner {
-            background-image: url("bg2.jpg");
-            background-size: cover;
-            padding: 40px;
-            color: white;
-        }
-        .banner h1 {
-            color: white;
-            margin: 10px 0;
-        }
-
-        /* faculty */
-        .faculty {
-            background: white;
-            padding: 50px 20px;
-        }
-        .faculty h2 {
-            font-size: 26px;
-            margin-bottom: 40px;
-            color: #333;
-        }
-        .faculty .container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .teacher {
-            width: 220px;
-            text-decoration: none;
-        }
-        .teacher img {
-            width: 200px;
-            height: 200px;
+            height: 450px;
             object-fit: cover;
         }
-        .teacher h3 {
-            background: rgba(0,91,172,0.7);
+
+        /* ===== 系所介紹 ===== */
+        .banner {
+            background: linear-gradient(#6ec6ff, #2196f3);
             color: white;
-            padding: 8px;
+            padding: 50px;
+            text-align: center;
         }
 
-        /* contact */
-        .contact {
+        .banner h1 {
+            margin-bottom: 15px;
+        }
+
+        /* ===== 師資 ===== */
+        .faculty {
+            background: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .faculty h2 {
+            margin-bottom: 30px;
+        }
+
+        .teachers {
             display: flex;
             justify-content: center;
-            margin: 40px 0;
+            gap: 40px;
         }
-        .contact .container {
+
+        .teacher img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .teacher h3 {
+            background: #005BAC;
+            color: white;
+            padding: 5px;
+        }
+
+        /* ===== 相關資訊 ===== */
+        .contact {
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-box {
             background: white;
             padding: 30px;
-            width: 80%;
+            width: 700px;
         }
-        .infos {
+
+        .info {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
-            flex-wrap: wrap;
         }
-        .left {
-            text-align: left;
-        }
-        .left b, .left span {
-            display: block;
-            margin: 8px 0;
-            text-align: left;
-        }
+
         iframe {
-            width: 320px;
-            height: 240px;
+            width: 300px;
+            height: 200px;
             border: 0;
         }
 
-        /* footer */
+        /* ===== 頁尾 ===== */
         .footer {
-            background-image: url("bg3.jpg");
-            background-size: cover;
-            padding: 30px;
+            background: #333;
             color: white;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
 
+<!-- ===== 頁首 ===== -->
 <div class="top">
-    <div class="container">
-        <div class="logo">
-            <img src="IMMUST_LOGO.JPG">
-            哇哈哈大學資訊管理系
-        </div>
-        <div class="top-nav">
-            <a href="#">哇哈哈科大</a>
-            <a href="#">管理學院</a>
-            <a href="#">登入</a>
-        </div>
+    <div class="logo">哇哈哈大學資訊管理系</div>
+    <div class="top-nav">
+        <a href="#">學校首頁</a>
+        <a href="#">管理學院</a>
+        <a href="#">登入</a>
     </div>
 </div>
 
+<!-- ===== 導覽列 ===== -->
 <div class="nav">
     <ul>
         <li><a href="#">首頁</a></li>
         <li><a href="#intro">系所簡介</a></li>
-        <li><a href="#faculty">師資介紹</a></li>
-        <li><a href="#about">相關資訊</a></li>
+        <li class="dropdown">
+            <a href="#">師資介紹</a>
+            <div class="dropdown-content">
+                <a href="#faculty">小雛</a>
+                <a href="#faculty">莫妮卡</a>
+                <a href="#faculty">艾莉</a>
+            </div>
+        </li>
+        <li><a href="#contact">相關資訊</a></li>
     </ul>
 </div>
 
+<!-- ===== 圖片輪播 ===== -->
 <div class="slider">
     <div class="flexslider">
         <ul class="slides">
-            <li><img src="slider1.JPG"></li>
-            <li><img src="slider2.JPG"></li>
-            <li><img src="slider3.JPG"></li>
+            <li><img src="slider1.jpg"></li>
+            <li><img src="slider2.jpg"></li>
+            <li><img src="slider3.jpg"></li>
         </ul>
     </div>
 </div>
 
+<!-- ===== 系所介紹 ===== -->
 <div class="banner" id="intro">
     <h1>系所簡介</h1>
-    <h1>榮獲核心價值實現典範獎</h1>
-    <h1>重視創意、實作與跨域學習</h1>
+    <p>培養具備資訊科技與管理能力之跨域人才</p>
+    <p>重視實作、創新與產學接軌</p>
 </div>
 
+<!-- ===== 師資介紹 ===== -->
 <div class="faculty" id="faculty">
     <h2>師資介紹</h2>
-    <div class="container">
+    <div class="teachers">
         <div class="teacher">
-            <img src="faculty1.jpg">
+            <img src="teacher1.jpg">
             <h3>小雛</h3>
         </div>
         <div class="teacher">
-            <img src="faculty2.jpg">
+            <img src="teacher2.jpg">
             <h3>莫妮卡</h3>
         </div>
         <div class="teacher">
-            <img src="faculty3.jpg">
+            <img src="teacher3.jpg">
             <h3>艾莉</h3>
         </div>
     </div>
 </div>
 
-<div class="contact" id="about">
-    <div class="container">
+<!-- ===== 相關資訊 ===== -->
+<div class="contact" id="contact">
+    <div class="contact-box">
         <h2>相關資訊</h2>
-        <div class="infos">
-            <div class="left">
-                <b>哇哈哈大學管理學院大樓五樓</b>
-                <span>304 挖搭發呼阿由277號</span>
-                <b>電話：03-185963</b>
-                <span>分機：1111、2222、5555</span>
+        <div class="info">
+            <div>
+                <p>地址：哇哈哈市資訊路100號</p>
+                <p>電話：03-1234567</p>
             </div>
-
-            <!-- 請用 Google Maps 分享 → 嵌入地圖 -->
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.635832"
-                loading="lazy">
-            </iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!"></iframe>
         </div>
     </div>
 </div>
 
+<!-- ===== 頁尾 ===== -->
 <div class="footer">
     © 2025 Department of Information Management
 </div>
