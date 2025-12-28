@@ -23,13 +23,6 @@
             color:gray;
             text-align:center;
         }
-
-        body{
-            background-image: url("images/bg_rain_crosswalk.jpg");
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
         .top{
             background-color: white;
         }
@@ -53,9 +46,7 @@
         }
         .top .top-nav a{
             text-decoration: none;
-            margin-left: 10px;
         }
-
         .nav {
             background-color:#333;
             display: flex;
@@ -78,9 +69,8 @@
             text-decoration: none;
         }
         .nav li a:hover {
-            background-color: #005BAC;
+            background-color: #111;
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
@@ -97,23 +87,16 @@
             display: block;
             text-align: left;
         }
-
         .slider{
             background-color: black;
         }
-
         .banner{
-            background-image: url("images/bg_cats.jpg");
-            background-size: cover;
-            background-position: center;
+            background-image: linear-gradient(#ABDCFF,#0396FF);
             padding:30px;
-            color: white;
         }
         .banner h1{
             padding: 20px;
-            color: white;
         }
-
         .faculty {
             background-color:white;
             padding:40px;
@@ -129,6 +112,7 @@
             align-items: center;
         }
         .faculty .teacher{
+            display:block;
             text-decoration: none;
         }
         .faculty .teacher img{
@@ -137,18 +121,12 @@
         }
         .faculty .teacher h3{
             color: white;
-            background-color: rgba(0,91,172,0.6);
-            padding: 5px;
+            background-color: rgba(39,40,34,.5);
         }
-
         .contact {
             display: flex;
             justify-content: center;
             margin: 30px 0;
-        }
-        .contact .container{
-            background-color: white;
-            padding: 30px;
         }
         .contact .container h2{
             color: rgb(54, 82, 110);
@@ -176,12 +154,10 @@
             width: 300px;
             height: 200px;
         }
-
         .footer{
-            background-image: url("images/bg_street.jpg");
-            background-size: cover;
+            background-color: rgb(25,26,30);
+            color:white;
             padding: 30px 0;
-            color: white;
         }
     </style>
 </head>
@@ -207,11 +183,11 @@
         <li><a href="#">首頁</a></li>
         <li><a href="#introduction">系所簡介</a></li>
         <li class="dropdown">
-            <a href="#faculty">師資介紹</a>
+            <a href="#faculty">成員簡介</a>
             <div class="dropdown-content">
-                <a href="#faculty">小雛</a>
+                <a href="#faculty">艾利</a>
                 <a href="#faculty">莫妮卡</a>
-                <a href="#faculty">艾莉</a>
+                <a href="#faculty">小雛</a>
             </div>
         </li>
         <li><a href="#about">相關資訊</a></li>
@@ -222,7 +198,7 @@
     <div class="flexslider" style="direction:rtl">
         <ul class="slides">
             <li><img src="slider1.JPG"></li>
-            <li><img src="slider2.GIF"></li>
+            <li><img src="slider2.JPG"></li>
             <li><img src="slider3.JPG"></li>
         </ul>
     </div>
@@ -230,25 +206,24 @@
 
 <div class="banner" id="introduction">
     <h1>系所簡介</h1>
-    <h1>榮獲核心價值實現典範獎</h1>
-    <h1>哇哈哈大學資訊管理系</h1>
     <h1>重視創意、實作與跨域學習</h1>
+    <h1>哇哈哈大學資訊管理系</h1>
 </div>
 
 <div class="faculty" id="faculty">
     <h2>師資介紹</h2>
     <div class="container">
         <a class="teacher">
-            <img src="images/teacher1.jpg">
-            <h3>小雛</h3>
+            <img src="faculty1.jpg">
+            <h3>艾利</h3>
         </a>
         <a class="teacher">
-            <img src="images/teacher2.jpg">
+            <img src="faculty2.jpg">
             <h3>莫妮卡</h3>
         </a>
         <a class="teacher">
-            <img src="images/teacher3.jpg">
-            <h3>艾莉</h3>
+            <img src="faculty3.jpg">
+            <h3>小雛</h3>
         </a>
     </div>
 </div>
@@ -258,12 +233,12 @@
         <h2>相關資訊</h2>
         <div class="infos">
             <div class="left">
-                <b>哇哈哈大學管理學院大樓五樓</b>
+                <b>哇哈哈大學管理學院五樓</b>
                 <span>304 挖搭發呼阿由277號</span>
                 <b>電話：03-1118941</b>
                 <span>分機：1111、2222、5555</span>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!"></iframe>
+            <iframe src="https://www.google.com/maps/embed"></iframe>
         </div>
     </div>
 </div>
