@@ -1,196 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-    <title>哇哈哈大學資訊管理系</title>
     <meta charset="utf-8">
+    <title>哇哈哈大學資訊管理系</title>
 
-    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>        
+    <!-- FlexSlider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"></script>
 
     <script>
-        $(window).load(function() {
+        $(window).on('load', function () {
             $('.flexslider').flexslider({
-                animation: "slide",
-                rtl: true
+                animation: "slide"
             });
         });
     </script>
 
     <style>
-        *{
-            margin:0;
-            color:gray;
-            text-align:center;
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, "Microsoft JhengHei", sans-serif;
+            text-align: center;
+            color: #555;
         }
 
-        body{
-            background-image: url("images/bg_rain_crosswalk.jpg");
+        body {
+            background-image: url("bg.jpg");
             background-size: cover;
             background-attachment: fixed;
         }
 
         /* top */
-        .top{
-            background-color: white;
+        .top {
+            background: white;
         }
-        .top .container{
+        .top .container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding:10px;
+            align-items: center;
+            padding: 15px;
         }
-        .top .logo{
-            font-size: 35px;
+        .logo {
+            font-size: 28px;
             font-weight: bold;
         }
-        .top .logo img{
-            width: 100px;
+        .logo img {
+            width: 90px;
             vertical-align: middle;
         }
-        .top .top-nav{
-            font-size: 25px;
-            font-weight: bold;       
-        }
-        .top .top-nav a{
+        .top-nav a {
+            margin-left: 15px;
             text-decoration: none;
-            margin-left: 10px;
+            font-size: 20px;
         }
 
         /* nav */
         .nav {
-            background-color:#333;
+            background: #333;
+        }
+        .nav ul {
+            list-style: none;
             display: flex;
             justify-content: center;
         }
-        .nav ul {
-            list-style-type: none;  
-            margin: 0; 
-            padding: 0; 
-            overflow: hidden; 
-            background-color: #333; 
-        }
-        .nav li {
-            float: left; 
-        }
-        .nav li a {    
-            display: block;  
-            color: white;  
-            text-align: center;  
-            padding: 14px 16px;  
-            text-decoration: none;  
+        .nav li a {
+            color: white;
+            padding: 15px 20px;
+            display: block;
+            text-decoration: none;
         }
         .nav li a:hover {
-            background-color: #005BAC;
-        }
-
-        /* dropdown */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            min-width: 160px;
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            display: block;
-            text-align: left;
+            background: #005BAC;
         }
 
         /* slider */
-        .slider{
-            background-color: black;
+        .slider {
+            background: black;
+        }
+        .flexslider img {
+            width: 100%;
+            height: auto;
         }
 
         /* banner */
-        .banner{
-            background-image: url("images/bg_cats.jpg");
+        .banner {
+            background-image: url("bg2.jpg");
             background-size: cover;
-            background-position: center;
-            padding:30px;
+            padding: 40px;
             color: white;
         }
-        .banner h1{
-            padding: 20px;
+        .banner h1 {
             color: white;
+            margin: 10px 0;
         }
 
         /* faculty */
         .faculty {
-            background-color:white;
-            padding:40px;
+            background: white;
+            padding: 50px 20px;
         }
         .faculty h2 {
-            font-size: 25px;
-            color: rgb(50,51,52);
-            padding-bottom:40px;
+            font-size: 26px;
+            margin-bottom: 40px;
+            color: #333;
         }
         .faculty .container {
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            flex-wrap: wrap;
         }
-        .faculty .teacher{
+        .teacher {
+            width: 220px;
             text-decoration: none;
         }
-        .faculty .teacher img{
-            height: 200px;
+        .teacher img {
             width: 200px;
+            height: 200px;
             object-fit: cover;
         }
-        .faculty .teacher h3{
+        .teacher h3 {
+            background: rgba(0,91,172,0.7);
             color: white;
-            background-color: rgba(0,91,172,0.6);
-            padding: 5px;
+            padding: 8px;
         }
 
         /* contact */
         .contact {
             display: flex;
             justify-content: center;
-            margin: 30px 0;                
+            margin: 40px 0;
         }
-        .contact .container{
-            background-color: white;
+        .contact .container {
+            background: white;
             padding: 30px;
+            width: 80%;
         }
-        .contact .container h2{
-            color: rgb(54, 82, 110);
-            font-size: 25px;
+        .infos {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
-        .infos{
-            display:flex;
-            margin-top: 30px; 
-        }
-        .left{
+        .left {
             text-align: left;
-            margin-right: 30px;
         }
-        .left b{
-            display:block;
-            margin-top: 10px;
-            font-size: 18px;
+        .left b, .left span {
+            display: block;
+            margin: 8px 0;
+            text-align: left;
         }
-        .left span{
-            display:block;
-            margin-top: 10px;
-            padding-left: 27px;
-        }
-        iframe{
-            width: 300px;
-            height: 200px;
+        iframe {
+            width: 320px;
+            height: 240px;
+            border: 0;
         }
 
         /* footer */
-        .footer{
-            background-image: url("images/bg_street.jpg");
+        .footer {
+            background-image: url("bg3.jpg");
             background-size: cover;
-            padding: 30px 0;
+            padding: 30px;
             color: white;
         }
     </style>
@@ -201,7 +172,7 @@
 <div class="top">
     <div class="container">
         <div class="logo">
-            <img src="https://github.com/shhuangmust/html/raw/111-1/IMMUST_LOGO.JPG">
+            <img src="IMMUST_LOGO.JPG">
             哇哈哈大學資訊管理系
         </div>
         <div class="top-nav">
@@ -212,18 +183,11 @@
     </div>
 </div>
 
-<div class="nav">   
+<div class="nav">
     <ul>
         <li><a href="#">首頁</a></li>
-        <li><a href="#introduction">系所簡介</a></li>
-        <li class="dropdown">
-            <a href="#faculty">師資介紹</a>
-            <div class="dropdown-content">
-                <a href="#faculty">小雛</a>
-                <a href="#faculty">莫妮卡</a>
-                <a href="#faculty">艾莉</a>
-            </div>
-        </li>
+        <li><a href="#intro">系所簡介</a></li>
+        <li><a href="#faculty">師資介紹</a></li>
         <li><a href="#about">相關資訊</a></li>
     </ul>
 </div>
@@ -231,35 +195,34 @@
 <div class="slider">
     <div class="flexslider">
         <ul class="slides">
-            <li><img src="https://github.com/shhuangmust/html/raw/111-1/slider1.JPG"></li>
-            <li><img src="https://github.com/shhuangmust/html/raw/111-1/slider2.JPG"></li>
-            <li><img src="https://github.com/shhuangmust/html/raw/111-1/slider3.JPG"></li>
+            <li><img src="slider1.JPG"></li>
+            <li><img src="slider2.JPG"></li>
+            <li><img src="slider3.JPG"></li>
         </ul>
     </div>
 </div>
 
-<div class="banner" id="introduction">
+<div class="banner" id="intro">
     <h1>系所簡介</h1>
     <h1>榮獲核心價值實現典範獎</h1>
-    <h1>哇哈哈大學資訊管理系</h1>
     <h1>重視創意、實作與跨域學習</h1>
 </div>
 
 <div class="faculty" id="faculty">
     <h2>師資介紹</h2>
     <div class="container">
-        <a class="teacher">
-            <img src="images/teacher1.jpg">
+        <div class="teacher">
+            <img src="faculty1.jpg">
             <h3>小雛</h3>
-        </a>
-        <a class="teacher">
-            <img src="images/teacher2.jpg">
+        </div>
+        <div class="teacher">
+            <img src="faculty2.jpg">
             <h3>莫妮卡</h3>
-        </a>
-        <a class="teacher">
-            <img src="images/teacher3.jpg">
+        </div>
+        <div class="teacher">
+            <img src="faculty3.jpg">
             <h3>艾莉</h3>
-        </a>
+        </div>
     </div>
 </div>
 
@@ -273,13 +236,18 @@
                 <b>電話：03-185963</b>
                 <span>分機：1111、2222、5555</span>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!"></iframe>
+
+            <!-- 請用 Google Maps 分享 → 嵌入地圖 -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.635832"
+                loading="lazy">
+            </iframe>
         </div>
     </div>
 </div>
 
 <div class="footer">
-    &copy; 2022 Department of Information Management, MUST.
+    © 2025 Department of Information Management
 </div>
 
 </body>
