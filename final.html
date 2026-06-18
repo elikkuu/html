@@ -3,9 +3,9 @@
     <title>哇哈哈大學資訊管理系</title>
     <meta charset="utf-8">
 
-    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>
+    <link href="https://bootcss.com" rel="stylesheet">
+    <script src="https://bootcss.com"></script>
+    <script src="https://bootcss.com"></script>
 
     <script>
         $(window).load(function() {
@@ -173,6 +173,41 @@
             color:white;
             padding: 30px 0;
         }
+
+        /* 保留舊版布告欄與登入視窗的獨立額外樣式，完全不衝突與重疊您新版原有的設定 */
+        .bulletin{
+            background-color: rgb(255,204,153);
+            padding: 30px 0;
+        }
+        .bulletin table{
+            border-collapse:collapse;
+            font-family: 微軟正黑體;
+            font-size:16px; 
+            border:1px solid #000;
+            margin: 0 auto; 
+        }
+        .bulletin table th{
+            background-color: #abdcff;
+            color: #ffffff;
+            padding: 5px 10px;
+        }
+        .bulletin table td{
+            background-color: #ffffff;
+            color: #0396ff;
+            padding: 5px 10px;
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            right: 50px;
+            top: 50px;
+            width: 250px; 
+            height: auto; 
+            background-color: rgba(255,255,255,0.95); 
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 
@@ -181,13 +216,25 @@
 <div class="top">
     <div class="container">
         <div class="logo">
-            <img src="https://github.com/shhuangmust/html/raw/111-1/IMMUST_LOGO.JPG">
+            <img src="https://github.com">
             哇哈哈大學資訊管理系
         </div>
         <div class="top-nav">
             <a href="#">哇哈哈科大</a>
             <a href="#">管理學院</a>
-            <a href="#">登入</a>
+            <!-- 整合舊版內容：點擊可觸發彈出視窗的登入連結 -->
+            <a href="#" onclick="document.getElementById('login').style.display='block'; return false;">登入</a>
+            
+            <!-- 整合舊版內容：後端管理系統登入視窗表單 -->
+            <div id="login" class="modal">
+                <span onclick="document.getElementById('login').style.display='none'" style="cursor:pointer; float:right; font-weight:bold;">&times;</span>
+                <p style="font-weight:bold; margin-bottom:10px;">管理系統登入</p>
+                <form method="post" action="10.login.php">
+                    帳號：<input type="text" name="id" style="margin-bottom:5px;"><br />
+                    密碼：<input type="password" name="pwd"><p></p>
+                    <input type="submit" value="登入"> <input type="reset" value="清除">
+                </form>
+            </div>
         </div>
     </div>
 </div>
@@ -224,6 +271,15 @@
     <h1>哇哈哈大學資訊管理系</h1>
 </div>
 
+<!-- 整合舊版內容：最新消息布告欄表格區塊 -->
+<div class="bulletin">
+    <h1>最新消息</h1>
+    <table>
+        <tr><th>日期</th><th>公告主題</th></tr>
+        <tr><td>2026-06-18</td><td>資管系證照開始報名</td></tr>
+    </table>
+</div>
+
 <div class="faculty" id="faculty">
     <h2>師資介紹</h2>
     <div class="container">
@@ -252,7 +308,7 @@
                 <b>電話：03-1118941</b>
                 <span>分機：1111、2222、5555</span>
             </div>
-            <iframe src="https://www.google.com/maps/embed"></iframe>
+            <iframe src="https://google.com"></iframe>
         </div>
     </div>
 </div>
